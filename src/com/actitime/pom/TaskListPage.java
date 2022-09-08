@@ -66,6 +66,43 @@ public class TaskListPage {
 	public WebElement getCustName() {
 		return custName;
 	}
+	@FindBy(xpath = "//div[@id='taskManagementPage']/descendant::div[@class='cellWrapper'][1]/child::input")
+	private WebElement searchbtn;
+	@FindBy(xpath = "//div[@class='cpTreeBlock ui-widget-content ui-resizable']/child::div[@class='customersProjectsPanel']/child::div[@class='customersProjectsTreeContainer']/child::div/child::div[@class='filteredContainer']/child::div/child::div/child::div/child::div/child::div/child::div/child::span")
+	private WebElement Clickdeletebtn;
+	@FindBy(xpath = "//div[@class='taskListBlockWrapper']/descendant::div[@class='titleEditButtonContainer']/child::div[@class='editButton']")
+	private WebElement settingbtn;
+	@FindBy(xpath = "//div[@class='editCustomerPanelHeader']/descendant::div[@class='actionButton'][1]")
+	private WebElement actionbtn;
+	@FindBy(xpath = "//div[@class='taskManagement_customerPanel']/descendant::div[@class='deleteButton']/child::div")
+	private WebElement deletebtn;
+	@FindBy(xpath = "//div[@class='taskManagement_customerPanel']/descendant::div[@class='operationConfirmDialogInnerContainer']/child::div[@class='buttonsContainer']/descendant::div[@class='buttonIcon']")
+	private WebElement perDeletebtn;
+
+	public WebElement getSearchbtn() {
+		return searchbtn;
+	}
+
+	public WebElement getClickdeletebtn() {
+		return Clickdeletebtn;
+	}
+
+	public WebElement getSettingbtn() {
+		return settingbtn;
+	}
+
+	public WebElement getActionbtn() {
+		return actionbtn;
+	}
+
+	public WebElement getDeletebtn() {
+		return deletebtn;
+	}
+
+	public WebElement getPerDeletebtn() {
+		return perDeletebtn;
+	}
+	
 	
 	
 }

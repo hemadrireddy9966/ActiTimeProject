@@ -19,7 +19,15 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		
+		String res = result.getName();
+		TakesScreenshot t=(TakesScreenshot) driver;
+		File src = t.getScreenshotAs(OutputType.FILE);
+		File dest=new File("./ScreenShotforPassed/"+res+".png");
+		try {
+			FileUtils.copyFile(src, dest);
+		} catch (IOException e) {
+
+		}
 	}
 
 	@Override
@@ -27,7 +35,7 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 		String res = result.getName();
 		TakesScreenshot t=(TakesScreenshot) driver;
 		File src = t.getScreenshotAs(OutputType.FILE);
-		File dest=new File("./ScreenShot/"+res+".png");
+		File dest=new File("./ScreenShotforFailed/"+res+".png");
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {

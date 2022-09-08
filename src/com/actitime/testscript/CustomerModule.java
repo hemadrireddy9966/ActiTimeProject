@@ -31,6 +31,7 @@ public class CustomerModule extends BaseClass{
 		t.getCustNameTbx().sendKeys(custName);
 		t.getCustDespTbx().sendKeys(custDespt);
 		t.getSelectCustDropDown().click();
+		Thread.sleep(2500);
 		t.getOurCompanyOption().click();
 		t.getCreateCustomerBtn().click();
 		Thread.sleep(4000);
